@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --wine: #8B1E1E;
+  --gold: #D4AF37;
+  --ink: #222222;
+}
+
+html,
+body {
+  background-color: #ffffff;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 300;
+}
+
+/* Hide scrollbar but keep functionality on mobile */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* Selection */
+::selection {
+  background: rgba(139, 30, 30, 0.15);
+  color: var(--wine);
+}
+
+/* Prevent iOS tap highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Utility: thin hairline */
+.hairline {
+  height: 1px;
+  background-color: var(--wine);
+  opacity: 0.55;
+}
+
+/* Subtle paper grain for the cards */
+.paper-grain {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(rgba(139, 30, 30, 0.018) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
